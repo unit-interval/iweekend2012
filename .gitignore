@@ -10,6 +10,10 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
+# Ignore vendor and generated files
+/vendor/bundle
+/public/assets
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
