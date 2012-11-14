@@ -1,8 +1,8 @@
 production:
   sessions:
     default:
-      host:
-        - localhost:27017
+      hosts:
+        - razorfang:27017
       database: iweekend2012_production
   options:
     allow_dynamic_fields: false
