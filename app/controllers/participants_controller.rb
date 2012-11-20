@@ -1,4 +1,6 @@
 class ParticipantsController < ApplicationController
+  before_filter :admin_only
+
   # GET /participants
   # GET /participants.json
   def index

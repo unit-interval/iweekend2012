@@ -1,0 +1,31 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Occupation</th>
+      <th>Organization</th>
+      <th>Pitching</th>
+      <th>Idea</th>
+      <th>Bio</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @participants.each do |p| %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.email %></td>
+        <td><%= p.occupation %></td>
+        <td><%= p.organization %></td>
+        <td><%= p.pitching_idea ? 'Yes' : 'No' %></td>
+        <td><%= p.idea_desc %></td>
+        <td><%= p.bio %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_participant_path(p), :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

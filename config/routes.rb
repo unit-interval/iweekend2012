@@ -4,6 +4,8 @@ SkeletonRails::Application.routes.draw do
 
   root :to => 'index#index'
 
-  get "agenda", "faq", "intro", :controller => "index"
+  get "agenda", "faq", "apply", "confirm", "login", "console", :controller => "index"
+  post "apply" => "index#submit"
+  post "signin" => "index#signin"
 
 end
